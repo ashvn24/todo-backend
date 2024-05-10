@@ -13,7 +13,7 @@ class TodoPagination(pagination.PageNumberPagination):
 
 class TodoAPIVew(generics.ListCreateAPIView):
     serializer_class = TodoSerializer
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     # pagination_class = TodoPagination
     
     def perform_create(self, serializer):
